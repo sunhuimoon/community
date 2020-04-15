@@ -35,9 +35,10 @@ public class IndexController {
                         @RequestParam(name = "sort", required = false) String sort) {
 //        返回问题和页码
         PaginationDTO pagination = questionService.list(search, tag, sort, page, size);
-//         返回热门标签
+//         返回热门标签？？？？？？？？？？？？？？/？？？？？？？？？
         List<String> tags = hotTagCache.getHots();
         System.out.println(tags);
+
         model.addAttribute("pagination", pagination);
         model.addAttribute("search", search);
         model.addAttribute("tag", tag);

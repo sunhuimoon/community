@@ -16,6 +16,10 @@ import java.util.PriorityQueue;
 @Component
 @Data
 public class HotTagCache {
+//    public List<String> getHots() {
+//        return hots;
+    //[javascript, php, python]
+//    }
 //hots 哪里来的？？？？？？？？？？？？
     private List<String> hots = new ArrayList<>();
 
