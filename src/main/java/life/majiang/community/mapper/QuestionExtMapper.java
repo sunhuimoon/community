@@ -4,7 +4,7 @@ import life.majiang.community.dto.QuestionQueryDTO;
 import life.majiang.community.model.Question;
 
 import java.util.List;
-
+//实现了，在xml文件里，这是sql查询
 public interface QuestionExtMapper {
     int incView(Question record);
 

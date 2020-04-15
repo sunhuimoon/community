@@ -16,6 +16,7 @@ import java.util.PriorityQueue;
 @Component
 @Data
 public class HotTagCache {
+//hots 哪里来的？？？？？？？？？？？？
     private List<String> hots = new ArrayList<>();
 
     public void updateTags(Map<String, Integer> tags) {

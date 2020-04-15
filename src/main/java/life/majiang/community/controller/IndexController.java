@@ -25,14 +25,19 @@ public class IndexController {
     private HotTagCache hotTagCache;
 
     @GetMapping("/")
+//    https://blog.csdn.net/yongwa123/article/details/85017551
+
     public String index(Model model,
                         @RequestParam(name = "page", defaultValue = "1") Integer page,
-                        @RequestParam(name = "size", defaultValue = "10") Integer size,
+                        @RequestParam(name = "size", defaultValue = "2") Integer size,
                         @RequestParam(name = "search", required = false) String search,
                         @RequestParam(name = "tag", required = false) String tag,
                         @RequestParam(name = "sort", required = false) String sort) {
+//        返回问题和页码
         PaginationDTO pagination = questionService.list(search, tag, sort, page, size);
+//         返回热门标签
         List<String> tags = hotTagCache.getHots();
+        System.out.println(tags);
         model.addAttribute("pagination", pagination);
         model.addAttribute("search", search);
         model.addAttribute("tag", tag);
