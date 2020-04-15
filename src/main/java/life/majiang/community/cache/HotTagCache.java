@@ -20,9 +20,12 @@ public class HotTagCache {
 //        return hots;
     //[javascript, php, python]
 //    }
-//hots 哪里来的？？？？？？？？？？？？
-    private List<String> hots = new ArrayList<>();
 
+//hots 哪里来的？？？？？？？？？？？？
+    // 这个不是方法，hots经过下面处理了，忽然开窍
+
+    private List<String> hots = new ArrayList<>();
+//updateTags() 一启动就运行了。所以已经给hots赋值了。
     public void updateTags(Map<String, Integer> tags) {
         int max = 10;
         PriorityQueue<HotTagDTO> priorityQueue = new PriorityQueue<>(max);
