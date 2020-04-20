@@ -4,10 +4,8 @@ import life.majiang.community.dto.HotTagDTO;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.PriorityQueue;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 /**
  * Created by codedrinker on 2019/8/2.
@@ -53,6 +51,9 @@ public class HotTagCache {
             sortedTags.add(0, poll.getName());
             poll = priorityQueue.poll();
         }
+//        Date dNow = new Date( );
+//        SimpleDateFormat ft = new SimpleDateFormat ("yyyy-MM-dd hh:mm:ss");
+//        System.out.println("updateTags当前时间为: " + ft.format(dNow));
         hots = sortedTags;
     }
 }
