@@ -18,9 +18,13 @@ import java.io.PrintWriter;
 /**
  * Created by codedrinker on 2019/5/28.
  */
+//使用 @ControllerAdvice 实现全局异常处理
 @ControllerAdvice
 @Slf4j
 public class CustomizeExceptionHandler {
+//    @ExceptionHandler可以用来统一处理方法抛出的异常，
+//    @ExceptionHandler只有一个参数value，指定需要处理的异常类型。是一个数组类型。如：
+//    @ExceptionHandler(value={NullPointerException.class,IllegalArgumentException.class})
     @ExceptionHandler(Exception.class)
     ModelAndView handle(Throwable e, Model model, HttpServletRequest request, HttpServletResponse response) {
         String contentType = request.getContentType();
